@@ -1,0 +1,21 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: false
+  tasks:
+    vmware_guest: 
+      hostname: 192.168.60.21
+      username: root
+      password: r3dh4t1!
+      validate_certs: no
+      name: testvm1
+      state: powerdon
+      guest_id: centos64Guest
+      disk:
+        - size_gb: 10
+          type: thin
+          datastore: datastore1
+      hardware:
+        memory_mb: 512
+        num_cpus: 1
+        scsi: paravirtual
