@@ -1,0 +1,31 @@
+---
+- hosts: localhost
+  gather_facts: false
+  connection: local
+
+  tasks:
+    vmware_guest:
+      hostname: 192.168.5.26
+      username: Administrator
+      password: R33dh4t!
+      validate_certs: no
+      name: testvm1
+      state: poweredon
+      guest_id: centos64guest
+      esxi_hostname: 192.168.60.10
+      disk:
+        size_gb: 10
+        type: thin
+        datastore: datastore1
+      hardware:
+        memory_mb: 512
+        num_cpus: 2
+        scsi: parvirtual
+      netowrks:
+        name: VM_Network
+        ip: 192.168.80.10
+        netmask: 255.255.0.0
+        device_type: vmxnet3
+      wait_for_ip_address: yes
+    delegate_to: localhost
+    register: deploy_vm
