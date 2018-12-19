@@ -7,7 +7,7 @@
     vmware_guest:
       hostname: 192.168.5.26
       username: Administrator
-      password: R33dh4t!
+      password: <<psswrd>>
       validate_certs: no
       name: testvm1
       state: poweredon
