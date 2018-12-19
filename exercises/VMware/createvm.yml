@@ -6,7 +6,7 @@
     vmware_guest: 
       hostname: 192.168.60.21
       username: root
-      password: r3dh4t1!
+      password: <<psswrd>>
       validate_certs: no
       name: testvm1
       state: powerdon
