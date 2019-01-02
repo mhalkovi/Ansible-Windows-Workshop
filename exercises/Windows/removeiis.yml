@@ -1,0 +1,15 @@
+---
+- hosts: win
+  tasks:
+    - name: Ensure SNMP is started
+      win_service:
+        name: snmptrap
+        state: started
+
+    - name: Removing IIS
+      win_feature:
+        name: "Web-Server"
+        state: absent
+#        restart: yes
+        include_sub_features: yes
+        include_management_tools: yes
