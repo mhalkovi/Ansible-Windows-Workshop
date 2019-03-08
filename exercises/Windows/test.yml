@@ -2,4 +2,4 @@
 - hosts: all
   tasks:
     - name: Copy text file
-        get_url: url=https://github.com/mhalkovi/Ansible-Windows-Workshop.git/exercises/Windows/index.html dest=/tmp/index.html
+      get_url: url=https://github.com/mhalkovi/Ansible-Windows-Workshop.git/exercises/Windows/index.html dest=/tmp/index.html
