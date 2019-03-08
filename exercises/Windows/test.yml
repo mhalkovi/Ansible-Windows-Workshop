@@ -1,0 +1,7 @@
+---
+- hosts: win
+  tasks:
+    - name: Copy text file
+      copy:
+        command: wget 
+        dest: /etc/foo.conf
