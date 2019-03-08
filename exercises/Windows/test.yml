@@ -3,5 +3,5 @@
   tasks:
     - name: Copy text file
       copy:
-        command: wget Ansible-Windows-Workshop/exercises/Windows/index.html
-        dest: /etc/foo.conf
+        command: wget https://github.com/mhalkovi/Ansible-Windows-Workshop.git/exercises/Windows/index.html
+        dest: /tmp.index.html
