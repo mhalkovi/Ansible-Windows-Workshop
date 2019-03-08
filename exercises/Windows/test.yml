@@ -3,7 +3,7 @@
   tasks:
     - name: Copy text file
       copy:
-        src: https://github.com/mhalkovi/Ansible-Windows-Workshop/index.html
+        remote_src: https://github.com/mhalkovi/Ansible-Windows-Workshop/index.html
         dest: "/tmp"
 #      register: res
 
