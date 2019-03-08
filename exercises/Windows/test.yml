@@ -2,8 +2,8 @@
 - hosts: all
   tasks:
     - name: Copy text file
-      get_url:
-        url: https://github.com/mhalkovi/Ansible-Windows-Workshop/index.html
+      copy:
+        src: https://github.com/mhalkovi/Ansible-Windows-Workshop/index.html
         dest: "/tmp"
 #      register: res
 
