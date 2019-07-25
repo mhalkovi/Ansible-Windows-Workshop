@@ -1,5 +1,5 @@
 ---
-- hosts: win
+- hosts: all
   tasks:
     - name: Ensure SNMP is started
       win_service:
